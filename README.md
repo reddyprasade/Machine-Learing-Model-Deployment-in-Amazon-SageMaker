@@ -50,3 +50,10 @@ Input variables:
 3. Train the model to learn from the data
 4. Deploy the model
 5. Evaluate your ML model's performance
+
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-07-00.png)
+
+### Step 1. Create an Amazon SageMaker notebook instance for data preparation
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-11-24.png)
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-12-58.png)
+
