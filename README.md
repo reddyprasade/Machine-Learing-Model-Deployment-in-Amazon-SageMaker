@@ -60,3 +60,10 @@ Input variables:
 ![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-16-13.png)
 ![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-16-35.png)
 
+### Step 2. Prepare the data
+In this step, you use your Amazon SageMaker notebook instance to preprocess the data that you need to train your machine learning model and then upload the data to Amazon S3.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-21-16.png)
+c. In a new code cell on your Jupyter notebook, copy and paste the following code and choose Run.
+
+This code imports the required libraries and defines the environment variables you need to prepare the data, train the ML model, and deploy the ML model.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-import-libraries..png)
