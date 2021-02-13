@@ -56,4 +56,7 @@ Input variables:
 ### Step 1. Create an Amazon SageMaker notebook instance for data preparation
 ![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-11-24.png)
 ![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-12-58.png)
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-15-42.png)
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-16-13.png)
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/2021-02-13_10-16-35.png)
 
