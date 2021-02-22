@@ -99,3 +99,44 @@ c. Start the training job. Copy and paste the following code into the next code 
 This code trains the model using gradient optimization on a ml.m4.xlarge instance. After a few minutes, you should see the training logs being generated in your Jupyter notebook.
 ![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-train-model.png)
 
+### Step 4. Deploy the model
+
+In this step, you deploy the trained model to an endpoint, reformat and load the CSV data, then run the model to create predictions.
+a. In a new code cell on your Jupyter notebook, copy and paste the following code and choose Run.
+
+This code deploys the model on a server and creates a SageMaker endpoint that you can access. This step may take a few minutes to complete.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-create-endpoint.png)
+
+b. To predict whether customers in the test data enrolled for the bank product or not, copy the following code into the next code cell and choose Run.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-predict-model.png)
+
+### Step 5. Evaluate model performance
+In this step, you evaluate the performance and accuracy of the machine learning model.
+In a new code cell on your Jupyter notebook, copy and paste the following code and choose Run.
+
+This code compares the actual vs. predicted values in a table called a confusion matrix.
+Based on the prediction, we can conclude that you predicted a customer will enroll for a certificate of deposit accurately for 90% of customers in the test data, with a precision of 65% (278/429) for enrolled and 90% (10,785/11,928) for didn’t enroll.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-evaluate-model.png)
+
+### Step 6. Clean up
+In this step, you terminate the resources you used in this lab.
+
+Important: Terminating resources that are not actively being used reduces costs and is a best practice. Not terminating your resources will result in charges to your account.
+
+a. Delete your endpoint: In your Jupyter notebook, copy and paste the following code and choose Run.
+---
+ xgb_predictor.delete_endpoint()
+ xgb_predictor.delete_model()
+---
+b. Delete your training artifacts and S3 bucket: In your Jupyter notebook, copy and paste the following code and choose Run.
+---
+bucket_to_delete = boto3.resource('s3').Bucket(bucket_name)
+bucket_to_delete.objects.all().delete()
+---
+c. Delete your SageMaker Notebook: Stop and delete your SageMaker Notebook.
+
+* Open the SageMaker console.
+* Under Notebooks, choose Notebook instances.
+* Choose the notebook instance that you created for this tutorial, then choose Actions, Stop. The notebook instance takes up to several minutes to stop. When Status changes to Stopped, move on to the next step.
+* Choose Actions, then Delete.
+* Choose Delete.
