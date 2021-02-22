@@ -67,3 +67,35 @@ c. In a new code cell on your Jupyter notebook, copy and paste the following cod
 
 This code imports the required libraries and defines the environment variables you need to prepare the data, train the ML model, and deploy the ML model.
 ![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-import-libraries..png)
+d. Create the S3 bucket to store your data. Copy and paste the following code into the next code cell and choose Run.
+
+Note: Make sure to replace the bucket_name your-s3-bucket-name with a unique S3 bucket name. If you don't receive a success message after running the code, change the bucket name and try again.
+
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-create-bucket.png)
+
+e. Download the data to your SageMaker instance and load the data into a dataframe. Copy and paste the following code into the next code cell and choose Run.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-download-data.png)
+
+f. Shuffle and split the data into training data and test data. Copy and paste the following code into the next code cell and choose Run.
+
+The training data (70% of customers) is used during the model training loop. You use gradient-based optimization to iteratively refine the model parameters. Gradient-based optimization is a way to find model parameter values that minimize the model error, using the gradient of the model loss function.
+
+The test data (remaining 30% of customers) is used to evaluate the performance of the model and measure how well the trained model generalizes to unseen data.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-shuffle-split-data.png)
+
+### Step 3. Train the ML model
+
+In this step, you use your training dataset to train your machine learning model.
+a. In a new code cell on your Jupyter notebook, copy and paste the following code and choose Run.
+
+This code reformats the header and first column of the training data and then loads the data from the S3 bucket. This step is required to use the Amazon SageMaker pre-built XGBoost algorithm.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-reformat-data.png)
+
+b. Set up the Amazon SageMaker session, create an instance of the XGBoost model (an estimator), and define the model’s hyperparameters. Copy and paste the following code into the next code cell and choose Run.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-create-session.png)
+
+c. Start the training job. Copy and paste the following code into the next code cell and choose Run.
+
+This code trains the model using gradient optimization on a ml.m4.xlarge instance. After a few minutes, you should see the training logs being generated in your Jupyter notebook.
+![](https://github.com/reddyprasade/Machine-Learing-Model-Deployment-in-Amazon-SageMaker/blob/main/img/tutorial-sagemaker-train-model.png)
+
